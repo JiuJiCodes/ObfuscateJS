@@ -38,9 +38,8 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add _worker.js
-          git add -f build/
-          git commit -m "Automated build: update _worker.js"
+          git add _worker2.js
+          git commit -m "Obfuscate: update _worker2.js"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
