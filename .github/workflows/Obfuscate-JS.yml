@@ -38,15 +38,15 @@ jobs:
         run: |
           npm install
 
-      - name: Clone BPB workjs
+      - name: Download JS
         run: |
           wget -O $JSNAME $JSURL
       
-      - name: Obfuscate BPB worker js
+      - name: Obfuscate JS
         run: |
           npx javascript-obfuscator --config ./obfs-config.json $JSNAME --output "_${{JSNAME}}"
 
-      - name: Commit and push built worker
+      - name: Commit and push built JS
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
