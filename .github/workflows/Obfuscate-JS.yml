@@ -44,14 +44,14 @@ jobs:
       
       - name: Obfuscate JS
         run: |
-          npx javascript-obfuscator --config ./obfs-config.json $JSNAME --output "_${{JSNAME}}"
+          npx javascript-obfuscator --config ./obfs-config.json $JSNAME --output "_${JSNAME}"
 
       - name: Commit and push built JS
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add "_${{JSNAME}}"
-          git commit -m "Obfuscate: update _${{JSNAME}}"
+          git add "_${JSNAME}"
+          git commit -m "Obfuscate: update _${JSNAME}"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
