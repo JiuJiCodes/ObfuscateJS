@@ -1,6 +1,6 @@
 {
   "deadCodeInjection": true,
-  "deadCodeInjectionThreshold": 0.4,
+  "deadCodeInjectionThreshold": 0.7,
   "numbersToExpressions": true,
   "stringArrayEncoding": ["base64"],
   "transformObjectKeys": true,
